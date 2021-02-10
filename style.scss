@@ -1,0 +1,277 @@
+/*COLORS*/
+//primary
+$pink: hsl(322, 100%, 66%);
+$light-pink: hsl(321, 100%, 78%);
+$red: hsl(0, 100%, 63%);
+//Neutral
+$cyan: hsl(192, 100%, 9%);
+$blue: hsl(207, 100%, 98%);
+
+/*FONTS*/
+//headings
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$head: Poppins;
+$head-weight: 700;
+//body
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+$body: "Open Sans";
+$normal: 400;
+$bold: 600;
+
+body, html, *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $body;
+    font-weight: $normal;
+    border: 1px solid red;
+}
+.main-wrapper{
+    color: $cyan;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px 1400px 2200px 300px 100px 500px;
+    grid-template-areas: "nav-link" "community" "benefits" "register" "footer-top" "footer";
+
+    nav, section, footer{
+        padding: 50px 0;
+    }
+    .nav-link{
+        grid-area: nav-link;
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 5%;
+        a{
+            text-decoration: none;
+            color: $pink;
+            border: 1px solid $pink;
+            padding: 10px 50px;
+            border-radius: 40px;
+            font-weight: $bold;
+            &:hover, &:focus{
+                border: 1px solid $light-pink;
+                color: $light-pink;
+            }
+        }
+    }
+    .community{
+        grid-area: community;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 50px 10%;
+        .build{
+            padding: 0 2.5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 20%;
+            text-align: center;
+            h1{
+                font-family: $head;
+                font-weight: $head-weight;
+                font-size: 60px;
+            }
+            p{
+                width: 35%;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    background-color:$pink;
+                    padding: 10px 15%;
+                    border-radius: 40px;
+                    font-weight: $bold;
+
+                    &:hover, &:focus{
+                        background-color: $light-pink;
+                    }
+                }
+            }
+        }
+        figure{
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            image{
+                width: 100%;
+            }
+        }
+        .stats{
+            padding: 0 2.5%;
+            display: flex;
+            justify-content: space-between;
+            height: 15%;
+            padding: 0 15%;
+            ul{
+                list-style: none;
+                li{
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    img{
+                        width: 50px;
+                    };
+                    span{
+                        font-size: 70px;
+                        font-weight: $head-weight;
+                        font-family: $head;
+                    }
+                }
+            }
+        }
+    }
+    .benefits{
+        grid-area: benefits;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        article{
+            padding: 0 5%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .benefit-text{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                p{
+                    margin-top: 20px;
+                }
+                h2{
+                    font-size: 50px;
+                    font-family: $head;
+                    font-weight: $head-weight;
+                }
+            }
+            figure{
+                width: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .users, .grow{
+            background-color: $blue;
+        }
+    }
+    .register{
+        grid-area: register;
+        text-align: center;
+        h2{
+            font-size: 50px;
+            font-weight: $head-weight;
+            font-family: $head;
+        }
+        p{
+            margin-top: 30px;
+            a{
+                text-decoration: none;
+                color: white;
+                background-color:$pink;
+                padding: 15px 10%;
+                border-radius: 40px;
+                font-weight: $bold;
+
+                &:hover, &:focus{
+                    background-color: $light-pink;
+                }
+            }
+        }
+    }
+    .footer-top{
+        width: 100%;
+        grid-area: footer-top;
+        background-image: url(images/bg-footer-top-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .footer{
+        padding: 100px 5%;
+        grid-area: footer;
+        background-color: $cyan;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: white;
+        .contact{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            p{
+                width: 45%;
+            }
+            .reach{
+                .phone{
+                    list-style-image: url(images/icon-phone.svg);
+                    list-style-position: inside;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+                .mail{
+                    list-style-image: url(images/icon-email.svg);
+                    list-style-position: inside;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .socials{
+                li{
+                    list-style: none;
+                    display: inline;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        font-size: 30px;
+                        margin-right: 10px;
+                        &:hover, &:focus{
+                            color: rgb(67, 67, 247);
+                        }
+                    }
+                }
+            }
+        }
+        .newsletter{
+            width: 50%;
+            padding-top: 20px;
+            h2{
+                font-family: $head;
+                font-weight: $bold;
+                margin-bottom: 20px;
+            }
+            p{
+                margin-bottom: 20px;
+            }
+            .email{
+                width: 60%;
+                height: 40px;
+                border-radius: 5px;
+                padding-left: 10px;
+            }
+            button{
+                height: 40px;
+                border: none;
+                width: 20%;
+                margin-left: 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: $pink;
+                color: white;
+                font-family: $head;
+                font-weight: $bold;
+                &:focus, &:hover{
+                    background-color: $light-pink;
+                }
+            }
+        }
+    }
+}

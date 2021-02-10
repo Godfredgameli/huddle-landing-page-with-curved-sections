@@ -1,0 +1,303 @@
+/*COLORS*/
+/*FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body, html, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
+  font-weight: 400;
+  border: 1px solid red;
+}
+
+.main-wrapper {
+  color: #00252e;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 150px 1400px 2200px 300px 100px 500px;
+  grid-template-areas: "nav-link" "community" "benefits" "register" "footer-top" "footer";
+}
+
+.main-wrapper nav, .main-wrapper section, .main-wrapper footer {
+  padding: 50px 0;
+}
+
+.main-wrapper .nav-link {
+  grid-area: nav-link;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 5%;
+}
+
+.main-wrapper .nav-link a {
+  text-decoration: none;
+  color: #ff52bf;
+  border: 1px solid #ff52bf;
+  padding: 10px 50px;
+  border-radius: 40px;
+  font-weight: 600;
+}
+
+.main-wrapper .nav-link a:hover, .main-wrapper .nav-link a:focus {
+  border: 1px solid #ff8fd8;
+  color: #ff8fd8;
+}
+
+.main-wrapper .community {
+  grid-area: community;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 50px 10%;
+}
+
+.main-wrapper .community .build {
+  padding: 0 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20%;
+  text-align: center;
+}
+
+.main-wrapper .community .build h1 {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.main-wrapper .community .build p {
+  width: 35%;
+}
+
+.main-wrapper .community .build p a {
+  text-decoration: none;
+  color: white;
+  background-color: #ff52bf;
+  padding: 10px 15%;
+  border-radius: 40px;
+  font-weight: 600;
+}
+
+.main-wrapper .community .build p a:hover, .main-wrapper .community .build p a:focus {
+  background-color: #ff8fd8;
+}
+
+.main-wrapper .community figure {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-wrapper .community figure image {
+  width: 100%;
+}
+
+.main-wrapper .community .stats {
+  padding: 0 2.5%;
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+  padding: 0 15%;
+}
+
+.main-wrapper .community .stats ul {
+  list-style: none;
+}
+
+.main-wrapper .community .stats ul li {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-wrapper .community .stats ul li img {
+  width: 50px;
+}
+
+.main-wrapper .community .stats ul li span {
+  font-size: 70px;
+  font-weight: 700;
+  font-family: Poppins;
+}
+
+.main-wrapper .benefits {
+  grid-area: benefits;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main-wrapper .benefits article {
+  padding: 0 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-wrapper .benefits article .benefit-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-wrapper .benefits article .benefit-text p {
+  margin-top: 20px;
+}
+
+.main-wrapper .benefits article .benefit-text h2 {
+  font-size: 50px;
+  font-family: Poppins;
+  font-weight: 700;
+}
+
+.main-wrapper .benefits article figure {
+  width: 50%;
+}
+
+.main-wrapper .benefits article figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-wrapper .benefits .users, .main-wrapper .benefits .grow {
+  background-color: #f5faff;
+}
+
+.main-wrapper .register {
+  grid-area: register;
+  text-align: center;
+}
+
+.main-wrapper .register h2 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: Poppins;
+}
+
+.main-wrapper .register p {
+  margin-top: 30px;
+}
+
+.main-wrapper .register p a {
+  text-decoration: none;
+  color: white;
+  background-color: #ff52bf;
+  padding: 15px 10%;
+  border-radius: 40px;
+  font-weight: 600;
+}
+
+.main-wrapper .register p a:hover, .main-wrapper .register p a:focus {
+  background-color: #ff8fd8;
+}
+
+.main-wrapper .footer-top {
+  width: 100%;
+  grid-area: footer-top;
+  background-image: url(images/bg-footer-top-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.main-wrapper .footer {
+  padding: 100px 5%;
+  grid-area: footer;
+  background-color: #00252e;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+}
+
+.main-wrapper .footer .contact {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main-wrapper .footer .contact p {
+  width: 45%;
+}
+
+.main-wrapper .footer .contact .reach .phone {
+  list-style-image: url(images/icon-phone.svg);
+  list-style-position: inside;
+}
+
+.main-wrapper .footer .contact .reach .phone a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-wrapper .footer .contact .reach .mail {
+  list-style-image: url(images/icon-email.svg);
+  list-style-position: inside;
+}
+
+.main-wrapper .footer .contact .reach .mail a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-wrapper .footer .contact .socials li {
+  list-style: none;
+  display: inline;
+}
+
+.main-wrapper .footer .contact .socials li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.main-wrapper .footer .contact .socials li a:hover, .main-wrapper .footer .contact .socials li a:focus {
+  color: #4343f7;
+}
+
+.main-wrapper .footer .newsletter {
+  width: 50%;
+  padding-top: 20px;
+}
+
+.main-wrapper .footer .newsletter h2 {
+  font-family: Poppins;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.main-wrapper .footer .newsletter p {
+  margin-bottom: 20px;
+}
+
+.main-wrapper .footer .newsletter .email {
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.main-wrapper .footer .newsletter button {
+  height: 40px;
+  border: none;
+  width: 20%;
+  margin-left: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff52bf;
+  color: white;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.main-wrapper .footer .newsletter button:focus, .main-wrapper .footer .newsletter button:hover {
+  background-color: #ff8fd8;
+}
+/*# sourceMappingURL=style.css.map */

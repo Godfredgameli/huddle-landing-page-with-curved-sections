@@ -24,15 +24,14 @@ body, html, *{
     padding: 0;
     font-family: $body;
     font-weight: $normal;
-    border: 1px solid red;
 }
 .main-wrapper{
     color: $cyan;
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 150px 1400px 2200px 300px 100px 500px;
-    grid-template-areas: "nav-link" "community" "benefits" "register" "footer-top" "footer";
+    grid-template-rows: 150px 1400px 2800px 300px 600px;
+    grid-template-areas: "nav-link" "community" "benefits" "register" "footer";
 
     nav, section, footer{
         padding: 50px 0;
@@ -128,35 +127,55 @@ body, html, *{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        article{
-            padding: 0 5%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            .benefit-text{
-                width: 50%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                p{
-                    margin-top: 20px;
-                }
-                h2{
-                    font-size: 50px;
-                    font-family: $head;
-                    font-weight: $head-weight;
-                }
+        .users-wrapper, .grow-wrapper{
+            .border-top{
+                background-image: url(images/bg-section-top-desktop-1.svg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
             }
-            figure{
-                width: 50%;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
+            .border-bottom{
+                background-image: url(images/bg-section-bottom-desktop-2.svg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                
             }
         }
-        .users, .grow{
-            background-color: $blue;
+        .ben-wrappers{
+            width: 100%;
+            .border-top, .border-bottom{
+                width: 100%;
+                height: 100px;
+            }
+            article{
+                padding: 0 5%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .benefit-text{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    p{
+                        margin-top: 20px;
+                    }
+                    h2{
+                        font-size: 50px;
+                        font-family: $head;
+                        font-weight: $head-weight;
+                    }
+                }
+                figure{
+                    width: 50%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .users, .grow{
+                background-color: $blue;
+            }
         }
     }
     .register{
@@ -183,95 +202,99 @@ body, html, *{
             }
         }
     }
-    .footer-top{
-        width: 100%;
-        grid-area: footer-top;
-        background-image: url(images/bg-footer-top-desktop.svg);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    }
     .footer{
-        padding: 100px 5%;
         grid-area: footer;
-        background-color: $cyan;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        color: white;
-        .contact{
-            width: 50%;
+        .footer-top{
+            width: 100%;
+            height: 100px;
+            background-image: url(images/bg-footer-top-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border: none;
+        }
+        .footer-wrapper{
+            padding: 100px 5%;
+            background-color: $cyan;
             display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            p{
-                width: 45%;
-            }
-            .reach{
-                .phone{
-                    list-style-image: url(images/icon-phone.svg);
-                    list-style-position: inside;
-                    a{
-                        color: white;
-                        text-decoration: none;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: white;
+            .contact{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                p{
+                    width: 45%;
+                }
+                .reach{
+                    .phone{
+                        list-style-image: url(images/icon-phone.svg);
+                        list-style-position: inside;
+                        a{
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                    .mail{
+                        list-style-image: url(images/icon-email.svg);
+                        list-style-position: inside;
+                        a{
+                            color: white;
+                            text-decoration: none;
+                        }
                     }
                 }
-                .mail{
-                    list-style-image: url(images/icon-email.svg);
-                    list-style-position: inside;
-                    a{
-                        color: white;
-                        text-decoration: none;
-                    }
-                }
-            }
-            .socials{
-                li{
-                    list-style: none;
-                    display: inline;
-                    a{
-                        color: white;
-                        text-decoration: none;
-                        font-size: 30px;
-                        margin-right: 10px;
-                        &:hover, &:focus{
-                            color: rgb(67, 67, 247);
+                .socials{
+                    li{
+                        list-style: none;
+                        display: inline;
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            font-size: 30px;
+                            margin-right: 10px;
+                            &:hover, &:focus{
+                                color: rgb(67, 67, 247);
+                            }
                         }
                     }
                 }
             }
-        }
-        .newsletter{
-            width: 50%;
-            padding-top: 20px;
-            h2{
-                font-family: $head;
-                font-weight: $bold;
-                margin-bottom: 20px;
-            }
-            p{
-                margin-bottom: 20px;
-            }
-            .email{
-                width: 60%;
-                height: 40px;
-                border-radius: 5px;
-                padding-left: 10px;
-            }
-            button{
-                height: 40px;
-                border: none;
-                width: 20%;
-                margin-left: 20px;
-                border-radius: 5px;
-                cursor: pointer;
-                background-color: $pink;
-                color: white;
-                font-family: $head;
-                font-weight: $bold;
-                &:focus, &:hover{
-                    background-color: $light-pink;
+            .newsletter{
+                width: 50%;
+                padding-top: 20px;
+                h2{
+                    font-family: $head;
+                    font-weight: $bold;
+                    margin-bottom: 20px;
+                }
+                p{
+                    margin-bottom: 20px;
+                }
+                .email{
+                    width: 60%;
+                    height: 40px;
+                    border-radius: 5px;
+                    padding-left: 10px;
+                }
+                button{
+                    height: 40px;
+                    border: none;
+                    width: 20%;
+                    margin-left: 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    background-color: $pink;
+                    color: white;
+                    font-family: $head;
+                    font-weight: $bold;
+                    &:focus, &:hover{
+                        background-color: $light-pink;
+                    }
                 }
             }
+
         }
     }
 }

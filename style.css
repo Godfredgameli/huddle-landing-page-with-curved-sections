@@ -8,7 +8,6 @@ body, html, * {
   padding: 0;
   font-family: "Open Sans";
   font-weight: 400;
-  border: 1px solid red;
 }
 
 .main-wrapper {
@@ -16,8 +15,8 @@ body, html, * {
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 150px 1400px 2200px 300px 100px 500px;
-  grid-template-areas: "nav-link" "community" "benefits" "register" "footer-top" "footer";
+  grid-template-rows: 150px 1400px 2800px 300px 600px;
+  grid-template-areas: "nav-link" "community" "benefits" "register" "footer";
 }
 
 .main-wrapper nav, .main-wrapper section, .main-wrapper footer {
@@ -132,40 +131,61 @@ body, html, * {
   justify-content: space-evenly;
 }
 
-.main-wrapper .benefits article {
+.main-wrapper .benefits .users-wrapper .border-top, .main-wrapper .benefits .grow-wrapper .border-top {
+  background-image: url(images/bg-section-top-desktop-1.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.main-wrapper .benefits .users-wrapper .border-bottom, .main-wrapper .benefits .grow-wrapper .border-bottom {
+  background-image: url(images/bg-section-bottom-desktop-2.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.main-wrapper .benefits .ben-wrappers {
+  width: 100%;
+}
+
+.main-wrapper .benefits .ben-wrappers .border-top, .main-wrapper .benefits .ben-wrappers .border-bottom {
+  width: 100%;
+  height: 100px;
+}
+
+.main-wrapper .benefits .ben-wrappers article {
   padding: 0 5%;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.main-wrapper .benefits article .benefit-text {
+.main-wrapper .benefits .ben-wrappers article .benefit-text {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.main-wrapper .benefits article .benefit-text p {
+.main-wrapper .benefits .ben-wrappers article .benefit-text p {
   margin-top: 20px;
 }
 
-.main-wrapper .benefits article .benefit-text h2 {
+.main-wrapper .benefits .ben-wrappers article .benefit-text h2 {
   font-size: 50px;
   font-family: Poppins;
   font-weight: 700;
 }
 
-.main-wrapper .benefits article figure {
+.main-wrapper .benefits .ben-wrappers article figure {
   width: 50%;
 }
 
-.main-wrapper .benefits article figure img {
+.main-wrapper .benefits .ben-wrappers article figure img {
   width: 100%;
   height: 100%;
 }
 
-.main-wrapper .benefits .users, .main-wrapper .benefits .grow {
+.main-wrapper .benefits .ben-wrappers .users, .main-wrapper .benefits .ben-wrappers .grow {
   background-color: #f5faff;
 }
 
@@ -197,17 +217,21 @@ body, html, * {
   background-color: #ff8fd8;
 }
 
-.main-wrapper .footer-top {
+.main-wrapper .footer {
+  grid-area: footer;
+}
+
+.main-wrapper .footer .footer-top {
   width: 100%;
-  grid-area: footer-top;
+  height: 100px;
   background-image: url(images/bg-footer-top-desktop.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  border: none;
 }
 
-.main-wrapper .footer {
+.main-wrapper .footer .footer-wrapper {
   padding: 100px 5%;
-  grid-area: footer;
   background-color: #00252e;
   display: flex;
   flex-wrap: wrap;
@@ -215,76 +239,76 @@ body, html, * {
   color: white;
 }
 
-.main-wrapper .footer .contact {
+.main-wrapper .footer .footer-wrapper .contact {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.main-wrapper .footer .contact p {
+.main-wrapper .footer .footer-wrapper .contact p {
   width: 45%;
 }
 
-.main-wrapper .footer .contact .reach .phone {
+.main-wrapper .footer .footer-wrapper .contact .reach .phone {
   list-style-image: url(images/icon-phone.svg);
   list-style-position: inside;
 }
 
-.main-wrapper .footer .contact .reach .phone a {
+.main-wrapper .footer .footer-wrapper .contact .reach .phone a {
   color: white;
   text-decoration: none;
 }
 
-.main-wrapper .footer .contact .reach .mail {
+.main-wrapper .footer .footer-wrapper .contact .reach .mail {
   list-style-image: url(images/icon-email.svg);
   list-style-position: inside;
 }
 
-.main-wrapper .footer .contact .reach .mail a {
+.main-wrapper .footer .footer-wrapper .contact .reach .mail a {
   color: white;
   text-decoration: none;
 }
 
-.main-wrapper .footer .contact .socials li {
+.main-wrapper .footer .footer-wrapper .contact .socials li {
   list-style: none;
   display: inline;
 }
 
-.main-wrapper .footer .contact .socials li a {
+.main-wrapper .footer .footer-wrapper .contact .socials li a {
   color: white;
   text-decoration: none;
   font-size: 30px;
   margin-right: 10px;
 }
 
-.main-wrapper .footer .contact .socials li a:hover, .main-wrapper .footer .contact .socials li a:focus {
+.main-wrapper .footer .footer-wrapper .contact .socials li a:hover, .main-wrapper .footer .footer-wrapper .contact .socials li a:focus {
   color: #4343f7;
 }
 
-.main-wrapper .footer .newsletter {
+.main-wrapper .footer .footer-wrapper .newsletter {
   width: 50%;
   padding-top: 20px;
 }
 
-.main-wrapper .footer .newsletter h2 {
+.main-wrapper .footer .footer-wrapper .newsletter h2 {
   font-family: Poppins;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.main-wrapper .footer .newsletter p {
+.main-wrapper .footer .footer-wrapper .newsletter p {
   margin-bottom: 20px;
 }
 
-.main-wrapper .footer .newsletter .email {
+.main-wrapper .footer .footer-wrapper .newsletter .email {
   width: 60%;
   height: 40px;
   border-radius: 5px;
   padding-left: 10px;
 }
 
-.main-wrapper .footer .newsletter button {
+.main-wrapper .footer .footer-wrapper .newsletter button {
   height: 40px;
   border: none;
   width: 20%;
@@ -297,7 +321,7 @@ body, html, * {
   font-weight: 600;
 }
 
-.main-wrapper .footer .newsletter button:focus, .main-wrapper .footer .newsletter button:hover {
+.main-wrapper .footer .footer-wrapper .newsletter button:focus, .main-wrapper .footer .footer-wrapper .newsletter button:hover {
   background-color: #ff8fd8;
 }
 /*# sourceMappingURL=style.css.map */

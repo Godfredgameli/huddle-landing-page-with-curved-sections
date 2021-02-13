@@ -605,9 +605,6 @@ body, html {
   .main-wrapper .benefits .users-wrapper .border-bottom, .main-wrapper .benefits .grow-wrapper .border-bottom {
     background-image: url(images/bg-section-bottom-mobile-2.svg);
   }
-  .main-wrapper .benefits .ben-wrappers {
-    height: 100%;
-  }
   .main-wrapper .benefits .ben-wrappers .conversation {
     flex-direction: column;
   }

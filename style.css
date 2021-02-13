@@ -9,12 +9,14 @@ body, html, * {
   font-family: "Open Sans";
   font-weight: 400;
   resize: both;
+  border: 1px solid red;
 }
 
 /*Page container*/
 .main-wrapper {
   color: #00252e;
   width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 150px 1400px 2800px 300px 600px;
@@ -235,15 +237,16 @@ body, html, * {
 
 .main-wrapper .footer .footer-top {
   width: 100%;
-  height: 100px;
+  height: 20%;
   background-image: url(images/bg-footer-top-desktop.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .main-wrapper .footer .footer-wrapper {
-  padding: 100px 5%;
+  padding: 0 5%;
   width: 100%;
+  height: 75%;
   margin-bottom: 0;
   background-color: #00252e;
   display: flex;
@@ -341,6 +344,7 @@ body, html, * {
   text-align: center;
   padding: 10px 0;
   background-color: #00252e;
+  height: 5%;
 }
 
 .main-wrapper .footer .attribution a {
@@ -348,12 +352,27 @@ body, html, * {
 }
 
 /*RESPONSIVESS FOR VARIOUS SCREEN SIZES*/
-@media screen and (min-width: 1440px), screen and (max-width: 1700px) {
+@media screen and (min-width: 1441px) {
   .main-wrapper {
     grid-template-rows: 150px 1700px 2800px 300px 600px;
   }
   .main-wrapper .community .build p {
     width: 60%;
+  }
+}
+
+@media screen and (min-width: 1821px) {
+  .main-wrapper {
+    grid-template-rows: 150px 2000px 3400px 300px 600px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .main-wrapper {
+    grid-template-rows: 150px 1800px 2800px 300px 600px;
+  }
+  .main-wrapper .community .build p {
+    width: 50%;
   }
 }
 
@@ -408,6 +427,9 @@ body, html, * {
   .main-wrapper .benefits .ben-wrappers article .image-wrapper {
     width: 48;
   }
+  .main-wrapper .register {
+    padding: 0 2.5%;
+  }
   .main-wrapper .register h2 {
     font-size: 40px;
   }
@@ -416,7 +438,7 @@ body, html, * {
     font-size: 14px;
   }
   .main-wrapper .footer .footer-wrapper {
-    padding: 75px 0;
+    padding: 0 2.5%;
   }
   .main-wrapper .footer .footer-wrapper .contact {
     width: 48%;
@@ -501,6 +523,9 @@ body, html, * {
   .main-wrapper .benefits .ben-wrappers article .image-wrapper {
     width: 48;
   }
+  .main-wrapper .register {
+    padding: 0 2.5%;
+  }
   .main-wrapper .register h2 {
     font-size: 30px;
   }
@@ -509,7 +534,7 @@ body, html, * {
     font-size: 14px;
   }
   .main-wrapper .footer .footer-wrapper {
-    padding: 75px 0;
+    padding: 0 2.5%;
   }
   .main-wrapper .footer .footer-wrapper .contact {
     width: 48%;
@@ -518,6 +543,7 @@ body, html, * {
     width: 100%;
   }
   .main-wrapper .footer .footer-wrapper .newsletter {
+    padding-top: 40px;
     width: 48%;
   }
   .main-wrapper .footer .footer-wrapper .newsletter .email {
@@ -532,7 +558,7 @@ body, html, * {
 
 @media screen and (max-width: 480px) {
   .main-wrapper {
-    grid-template-rows: 150px 1200px 2500px 200px 900px;
+    grid-template-rows: 150px 1200px 2500px 200px 800px;
   }
   .main-wrapper section {
     padding: 0;
@@ -611,6 +637,9 @@ body, html, * {
   .main-wrapper .benefits .ben-wrappers article .image-wrapper {
     width: 100%;
   }
+  .main-wrapper .register {
+    padding: 0 2.5%;
+  }
   .main-wrapper .register h2 {
     font-size: 30px;
   }
@@ -623,7 +652,7 @@ body, html, * {
   }
   .main-wrapper .footer .footer-wrapper {
     flex-direction: column-reverse;
-    padding: 75px 0;
+    padding: 0 2.5%;
   }
   .main-wrapper .footer .footer-wrapper .contact {
     width: 100%;
@@ -646,7 +675,7 @@ body, html, * {
 
 @media screen and (max-width: 375px) {
   .main-wrapper {
-    grid-template-rows: 150px 1200px 2500px 200px 700px;
+    grid-template-rows: 150px 1200px 2500px 200px 800px;
   }
   .main-wrapper section {
     padding: 0;
@@ -732,34 +761,28 @@ body, html, * {
   .main-wrapper .footer .footer-top {
     background-image: url(images/bg-footer-top-mobile.svg);
   }
-  .main-wrapper .footer .footer-wrapper {
+  .main-wrapper .footer footer-wrapper {
     flex-direction: column-reverse;
     justify-content: space-around;
-    padding: 0;
+    padding: 0 2.5%;
   }
-  .main-wrapper .footer .footer-wrapper .contact {
+  .main-wrapper .footer footer-wrapper .contact {
     width: 100%;
   }
-  .main-wrapper .footer .footer-wrapper .contact p {
+  .main-wrapper .footer footer-wrapper .contact p {
     width: 100%;
   }
-  .main-wrapper .footer .footer-wrapper .newsletter {
+  .main-wrapper .footer footer-wrapper .newsletter {
     width: 100%;
     margin-bottom: 40px;
   }
-  .main-wrapper .footer .footer-wrapper .newsletter .email {
+  .main-wrapper .footer footer-wrapper .newsletter .email {
     width: 100%;
   }
-  .main-wrapper .footer .footer-wrapper .newsletter button {
+  .main-wrapper .footer footer-wrapper .newsletter button {
     float: right;
     margin-top: 10px;
     width: 50%;
-  }
-}
-
-@media screen and (min-width: 1701px) {
-  .main-wrapper {
-    grid-template-rows: 150px 2000px 3400px 300px 600px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -18,14 +18,18 @@ $body: "Open Sans";
 $normal: 400;
 $bold: 600;
 
-body, html, *{
+body, html{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: $body;
     font-weight: $normal;
-    resize: both;
+}
+*{
     border: 1px solid red;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
                         /*Page container*/
 .main-wrapper{

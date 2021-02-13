@@ -2,14 +2,19 @@
 /*FONTS*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-body, html, * {
+body, html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Open Sans";
   font-weight: 400;
-  resize: both;
+}
+
+* {
   border: 1px solid red;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /*Page container*/

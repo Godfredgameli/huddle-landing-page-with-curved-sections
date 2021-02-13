@@ -26,7 +26,6 @@ body, html{
     font-weight: $normal;
 }
 *{
-    border: 1px solid red;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -153,13 +152,15 @@ body, html{
         }
         .ben-wrappers{
             width: 100%;
+            height: 30%;
             .border-top, .border-bottom{
                 width: 100%;
-                height: 100px;
+                height: 10%;
             }
             article{
                 padding: 0 5%;
                 width: 100%;
+                height: 80%;
                 display: flex;
                 justify-content: space-between;
                 .benefit-text{
@@ -559,7 +560,7 @@ body, html{
 }
 @media screen and (max-width:480px){
         .main-wrapper{
-            grid-template-rows: 150px 1200px 2500px 200px 800px;
+            grid-template-rows: 150px 1200px 2000px 200px 800px;
             section{
                 padding: 0;
             }
@@ -614,7 +615,7 @@ body, html{
             .benefits{
                 .users-wrapper, .grow-wrapper{
                     .border-top{
-                        background-image: url(images/bg-section-top-desktop-1.svg);
+                        background-image: url(images/bg-section-top-mobile-1.svg);
                     }
                     .border-bottom{
                         background-image: url(images/bg-section-bottom-mobile-2.svg);
@@ -627,10 +628,10 @@ body, html{
                     article{
                         flex-direction: column-reverse;
                         justify-content: space-between;
-                        height: 70%;
                         padding: 0 2.5%;
                         .benefit-text{
                             width: 100%;
+                            height: 30%;
                             text-align: center;
                             h2{
                                 font-size: 25px;
@@ -638,6 +639,7 @@ body, html{
                         }
                         .image-wrapper{
                             width: 100%;
+                            height: 65%;
                         }
                     }
                 }

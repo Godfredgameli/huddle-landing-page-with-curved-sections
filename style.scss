@@ -325,24 +325,24 @@ body, html, *{
                     /*RESPONSIVESS FOR VARIOUS SCREEN SIZES*/
 
                   
-@media screen and (min-width:1441px){
-        .main-wrapper{
-            grid-template-rows: 150px 1700px 2800px 300px 600px;
-            .community{
-                .build{
-                    p{
-                        width: 60%;
-                    }
-                }
-            }
+// @media screen and (min-width:1441px){
+//         .main-wrapper{
+//             grid-template-rows: 150px 1700px 2800px 300px 600px;
+//             .community{
+//                 .build{
+//                     p{
+//                         width: 60%;
+//                     }
+//                 }
+//             }
             
-        }
-}
-@media screen and (min-width:1821px){
-    .main-wrapper{
-        grid-template-rows: 150px 2000px 3400px 300px 600px;                  
-    }
-}  
+//         }
+// }
+// @media screen and (min-width:1821px){
+//     .main-wrapper{
+//         grid-template-rows: 150px 2000px 3400px 300px 600px;                  
+//     }
+// }  
 @media screen and (max-width:1440px){
         .main-wrapper{
             grid-template-rows: 150px 1800px 2800px 300px 600px;
@@ -555,7 +555,7 @@ body, html, *{
 }
 @media screen and (max-width:480px){
         .main-wrapper{
-            grid-template-rows: 150px 1000px 2000px 200px 800px;
+            grid-template-rows: 150px 1200px 2500px 200px 800px;
             section{
                 padding: 0;
             }
